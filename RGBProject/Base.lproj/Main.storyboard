@@ -71,19 +71,19 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="azX-DB-5Qe">
                                                 <rect key="frame" x="-2" y="0.0" width="250" height="31"/>
                                                 <connections>
-                                                    <action selector="chooseRed" destination="BYZ-38-t0r" eventType="valueChanged" id="vX1-mQ-FC6"/>
+                                                    <action selector="chooseRGB" destination="BYZ-38-t0r" eventType="valueChanged" id="MxP-52-Rue"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1iy-1k-5jb">
                                                 <rect key="frame" x="-2" y="94" width="250" height="31"/>
                                                 <connections>
-                                                    <action selector="chooseGreen" destination="BYZ-38-t0r" eventType="valueChanged" id="8ie-3B-HWs"/>
+                                                    <action selector="chooseRGB" destination="BYZ-38-t0r" eventType="valueChanged" id="0ON-gE-Df2"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8zq-zy-BA0">
                                                 <rect key="frame" x="-2" y="188" width="250" height="31"/>
                                                 <connections>
-                                                    <action selector="chooseBlue" destination="BYZ-38-t0r" eventType="valueChanged" id="NvZ-ER-3EH"/>
+                                                    <action selector="chooseRGB" destination="BYZ-38-t0r" eventType="valueChanged" id="EsZ-ec-YBt"/>
                                                 </connections>
                                             </slider>
                                         </subviews>

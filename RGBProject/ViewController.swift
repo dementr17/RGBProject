@@ -17,15 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
     
-    private var redColor: CGFloat = 0.5
-    private var greenColor: CGFloat = 0.5
-    private var blueColor: CGFloat = 0.5
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         rgbView.layer.cornerRadius = 10
-        rgbView.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
+        rgbView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
         
         redSlider.minimumTrackTintColor = .red
         redLabel.text = String(format:"%.2f", redSlider.value)
@@ -38,19 +34,13 @@ class ViewController: UIViewController {
 
     }
     
-    @IBAction func chooseRed() {
-        redColor = CGFloat(redSlider.value)
+    @IBAction func chooseRGB() {
         redLabel.text = String(format:"%.2f", redSlider.value)
-        rgbView.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
-    }
-    @IBAction func chooseGreen() {
-        greenColor = CGFloat(greenSlider.value)
         greenLabel.text = String(format:"%.2f", greenSlider.value)
-        rgbView.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
-    }
-    @IBAction func chooseBlue() {
-        blueColor = CGFloat(blueSlider.value)
         blueLabel.text = String(format:"%.2f", blueSlider.value)
-        rgbView.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
+        rgbView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                          green: CGFloat(greenSlider.value),
+                                          blue: CGFloat(blueSlider.value),
+                                          alpha: 1)
     }
 }
