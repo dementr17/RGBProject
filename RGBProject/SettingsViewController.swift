@@ -23,6 +23,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var greenTF: UITextField!
     @IBOutlet weak var blueTF: UITextField!
     
+    var backgroundColor: UIColor!
+    var delegate: SettingsViewControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,14 +34,17 @@ class SettingsViewController: UIViewController {
         
         backgroundViewColor()
         
-        
-        
-
     }
     
     @IBAction func chooseRGB() {
         backgroundViewColor()
     }
+    
+    @IBAction func pressedDoneButton(_ sender: Any) {
+        delegate.setBackgroundColor(for: backgroundColor)
+        dismiss(animated: true)
+    }
+    
 }
 
 extension SettingsViewController {
@@ -56,9 +62,11 @@ extension SettingsViewController {
         greenTF.text = String(format:"%.2f", greenSlider.value)
         blueTF.text = String(format:"%.2f", blueSlider.value)
         
-        rgbView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
-                                          green: CGFloat(greenSlider.value),
-                                          blue: CGFloat(blueSlider.value),
-                                          alpha: 1)
+        backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                  green: CGFloat(greenSlider.value),
+                                  blue: CGFloat(blueSlider.value),
+                                  alpha: 1)
+        
+        rgbView.backgroundColor = backgroundColor
     }
 }
