@@ -39,6 +39,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F6E6C172777638A00624DF4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F6E6C132777465500624DF4 /* MainViewController.swift */,
+				5FF28DF32763169600AA673C /* SettingsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5F6E6C1A277763FA00624DF4 /* Storyboardes */ = {
+			isa = PBXGroup;
+			children = (
+				5FF28DF52763169600AA673C /* Main.storyboard */,
+				5FF28DFA2763169B00AA673C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboardes;
+			sourceTree = "<group>";
+		};
+		5F6E6C1B2777643E00624DF4 /* Media Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FF28DF82763169B00AA673C /* Assets.xcassets */,
+			);
+			path = "Media Files";
+			sourceTree = "<group>";
+		};
+		5F6E6C1C2777645A00624DF4 /* Setting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FF28DEF2763169600AA673C /* AppDelegate.swift */,
+				5FF28DF12763169600AA673C /* SceneDelegate.swift */,
+				5FF28DFD2763169B00AA673C /* Info.plist */,
+			);
+			path = "Setting Files";
+			sourceTree = "<group>";
+		};
 		5FF28DE32763169600AA673C = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +94,10 @@
 		5FF28DEE2763169600AA673C /* RGBProject */ = {
 			isa = PBXGroup;
 			children = (
-				5FF28DEF2763169600AA673C /* AppDelegate.swift */,
-				5FF28DF12763169600AA673C /* SceneDelegate.swift */,
-				5F6E6C132777465500624DF4 /* MainViewController.swift */,
-				5FF28DF32763169600AA673C /* SettingsViewController.swift */,
-				5FF28DF52763169600AA673C /* Main.storyboard */,
-				5FF28DF82763169B00AA673C /* Assets.xcassets */,
-				5FF28DFA2763169B00AA673C /* LaunchScreen.storyboard */,
-				5FF28DFD2763169B00AA673C /* Info.plist */,
+				5F6E6C1A277763FA00624DF4 /* Storyboardes */,
+				5F6E6C1C2777645A00624DF4 /* Setting Files */,
+				5F6E6C172777638A00624DF4 /* View Controllers */,
+				5F6E6C1B2777643E00624DF4 /* Media Files */,
 			);
 			path = RGBProject;
 			sourceTree = "<group>";
@@ -295,7 +327,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8JUQRQTM2T;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RGBProject/Info.plist;
+				INFOPLIST_FILE = "RGBProject/Setting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +355,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8JUQRQTM2T;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RGBProject/Info.plist;
+				INFOPLIST_FILE = "RGBProject/Setting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
