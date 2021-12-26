@@ -25,7 +25,6 @@ class SettingsViewController: UIViewController {
     
     var backgroundColor: UIColor!
     var delegate: SettingsViewControllerDelegate!
-    //var valueSlider: Float = 0.5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +87,12 @@ extension SettingsViewController: UITextFieldDelegate {
             redSlider.value = Float(redTF.text!)!
             greenSlider.value = Float(greenTF.text!)!
             blueSlider.value = Float(blueTF.text!)!
+            
+            backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                      green: CGFloat(greenSlider.value),
+                                      blue: CGFloat(blueSlider.value),
+                                      alpha: 1)
+
         }
     }
     
