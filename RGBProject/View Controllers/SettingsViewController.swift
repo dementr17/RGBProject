@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
     
     var backgroundColor: UIColor!
     var delegate: SettingsViewControllerDelegate!
-    var valueSlider: Float = 0.5
+    //var valueSlider: Float = 0.5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +59,6 @@ extension SettingsViewController: UITextFieldDelegate {
         greenLabel.text = String(format:"%.2f", greenSlider.value)
         blueLabel.text = String(format:"%.2f", blueSlider.value)
         
-        
-        
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
@@ -79,19 +77,18 @@ extension SettingsViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        redLabel.text = redTF.text
-        greenLabel.text = greenTF.text
-        blueLabel.text = blueTF.text
-
-        doneClicked()
-        
-        checkValidation(textField: textField)
-
-        
-        redSlider.value = valueSlider
-        greenSlider.value = valueSlider
-        blueSlider.value = valueSlider
-        
+        if checkValidation(textField: textField) == true {
+            
+            doneClicked()
+            
+            redLabel.text = redTF.text
+            greenLabel.text = greenTF.text
+            blueLabel.text = blueTF.text
+            
+            redSlider.value = Float(redTF.text!)!
+            greenSlider.value = Float(greenTF.text!)!
+            blueSlider.value = Float(blueTF.text!)!
+        }
     }
     
     func toolbarItems() {
@@ -121,26 +118,23 @@ extension SettingsViewController: UITextFieldDelegate {
                                       message: message,
                                       preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-                textField?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
     
-    func checkValidation(textField: UITextField) -> Float {
+    func checkValidation(textField: UITextField) -> Bool {
         
         let validFloat = Float(textField.text!)
         
         if (validFloat != nil) &&
             validFloat! >= 0.0 &&
             validFloat! <= 1.0 {
-            
-            valueSlider = validFloat!
+            return true
         } else {
             showAlert(title: "Error!", message: "Не верный формат", textField: textField)
+            return false
         }
-        
-        return valueSlider
     }
 }
 
