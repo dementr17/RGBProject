@@ -36,6 +36,7 @@ class SettingsViewController: UIViewController {
         toolbarItems()
         
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -92,7 +93,7 @@ extension SettingsViewController: UITextFieldDelegate {
                                       green: CGFloat(greenSlider.value),
                                       blue: CGFloat(blueSlider.value),
                                       alpha: 1)
-
+            rgbView.backgroundColor = backgroundColor
         }
     }
     
